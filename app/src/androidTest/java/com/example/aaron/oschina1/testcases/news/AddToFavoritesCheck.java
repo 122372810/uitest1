@@ -12,10 +12,6 @@ import org.junit.Test;
 
 public class AddToFavoritesCheck extends BasicTestCase{
 
-    public  AddToFavoritesCheck(){
-        super(true);
-    }
-
     @Test
     public void name() throws Exception {
         pm.getPageHome().clickNewsItem(3);

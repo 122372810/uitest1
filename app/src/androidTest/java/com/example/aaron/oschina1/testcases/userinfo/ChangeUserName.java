@@ -15,10 +15,6 @@ public class ChangeUserName extends BasicTestCase {
     //2. 点击我的资料，进行用户名修改修工程，ifabelsebc
     //3.退出再登录，校验用户名被修改为ifabelsebc
 
-    public ChangeUserName(){
-        super(true);
-    }
-
     @Test
     public void name() throws Exception {
         pm.getPageCommon().goToMyTab();

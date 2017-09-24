@@ -41,9 +41,10 @@ public class BasicTestCase {
         context.startActivity(intent);
 //        // 等待应用启动
 //        device.wait(Until.hasObject(By.text("动弹")),8000);
-        pm.getPageCommon().getMyTab();
+        pm.getPageCommon().goToMyTab();
+        Thread.sleep(2000);
         //如果已登录，就需要做登录的操作
-        if (!pm.getPageMy().getNickNameTv().equals("点击头像登录")) {
+        if (!pm.getPageMy().getNickName().equals("点击头像登录")) {
             pm.getPageMy().clickSettingsIcon();
             pm.getPageSettings().clickLogoutItem();
             pm.getPageSettings().clickBackBtn();

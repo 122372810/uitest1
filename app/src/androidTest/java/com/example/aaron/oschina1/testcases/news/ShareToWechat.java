@@ -12,13 +12,13 @@ public class ShareToWechat extends BasicTestCase {
 
     @Test
     public void name() throws Exception {
-        pm.getPageCommon().goToMyTab();
-        pm.getPageMy().clickLoginIcon();
-        pm.getPageLogin().login("735723619@qq.com","12345678");
-        pm.getPageCommon().goToHomeTab();
-        pm.getPageHome().clickNewsItem(3);
-        pm.getPageNewsDetail().clickShareBtn();
-        pm.getPageNewsDetail().shareToWechatMoment();
-        pm.getPageWeChatMoment().setMomentContent("分享来自开源中国的信息");
+//        pm.getPageCommon().goToMyTab();
+//        pm.getPageMy().clickLoginIcon();
+//        pm.getPageLogin().login("735723619@qq.com","12345678");
+//        pm.getPageCommon().goToHomeTab();
+//        pm.getPageHome().clickNewsItem(3);
+//        pm.getPageNewsDetail().clickShareBtn();
+//        pm.getPageNewsDetail().shareToWechatMoment();
+//        pm.getPageWeChatMoment().setMomentContent("分享来自开源中国的信息");
     }
 }

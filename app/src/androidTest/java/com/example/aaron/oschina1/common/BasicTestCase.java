@@ -19,6 +19,15 @@ import org.junit.Test;
  */
 @RunWith(AndroidJUnit4.class)
 public class BasicTestCase {
+    boolean isNeedLogin = false;
+
+    public BasicTestCase(boolean isNeedLogin){
+        this.isNeedLogin = isNeedLogin;
+    }
+
+    public BasicTestCase(){
+
+    }
 
     private UiDevice device;
     private final String PACKAGE_NAME = "net.oschina.app";
@@ -42,6 +51,24 @@ public class BasicTestCase {
         context.startActivity(intent);
 //        // 等待应用启动
 //        device.wait(Until.hasObject(By.text("动弹")),8000);
+        pm.getPageCommon().getMyTab();
+        //如果需要登录
+        if(isNeedLogin){
+            //如果还未登录，就需要做登录的操作
+            if(pm.getPageMy().getNickNameTv().equals("点击头像登录")){
+                pm.getPageMy().clickLoginIcon();
+                pm.getPageLogin().login("735723619@qq.com","12345678");
+            }
+        }else{
+            //如果不需要登录
+            //如果已经登录，就需要做退出的操作
+            if(!pm.getPageMy().getNickNameTv().equals("点击头像登录")){
+                pm.getPageMy().clickSettingsIcon();
+                pm.getPageSettings().clickLogoutItem();
+                pm.getPageSettings().clickBackBtn();
+            }
+        }
+        pm.getPageCommon().goToHomeTab();
     }
     
      @Test

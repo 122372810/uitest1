@@ -1,0 +1,11 @@
+diff a/app/src/androidTest/java/com/example/aaron/oschina1/common/BasicTestCase.java b/app/src/androidTest/java/com/example/aaron/oschina1/common/BasicTestCase.java	(rejected hunks)
+@@ -42,4 +42,9 @@
+ //        // 等待应用启动
+ //        device.wait(Until.hasObject(By.text("动弹")),8000);
+     }
++    
++     @Test
++    public void name() throws Exception {
++     
++    }
+ }

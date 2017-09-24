@@ -98,4 +98,5 @@ public class PageMy {
     public void clickFavorites(){
         helper.click(getFavorites());
     }
+
 }

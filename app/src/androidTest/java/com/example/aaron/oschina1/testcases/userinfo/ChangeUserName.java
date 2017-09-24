@@ -15,11 +15,13 @@ public class ChangeUserName extends BasicTestCase {
     //2. 点击我的资料，进行用户名修改修工程，ifabelsebc
     //3.退出再登录，校验用户名被修改为ifabelsebc
 
+    public ChangeUserName(){
+        super(true);
+    }
+
     @Test
     public void name() throws Exception {
         pm.getPageCommon().goToMyTab();
-        pm.getPageMy().clickLoginIcon();
-        pm.getPageLogin().login("735723619@qq.com","12345678");
         pm.getPageMy().clickMyDataItem();
         pm.getPageMyData().clickNickNameTv();
         pm.getPageModifyUserInfo().changeUserName("ifabelsebd");

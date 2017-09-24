@@ -42,4 +42,9 @@ public class BasicTestCase {
 //        // 等待应用启动
 //        device.wait(Until.hasObject(By.text("动弹")),8000);
     }
+    
+     @Test
+    public void name() throws Exception {
+     
+    }
 }

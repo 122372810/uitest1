@@ -12,6 +12,7 @@ import com.example.aaron.oschina1.pages.PageManager;
 
 import org.junit.Before;
 import org.junit.runner.RunWith;
+import org.junit.Test;
 
 /**
  * Created by Aaron on 2017/9/17.
